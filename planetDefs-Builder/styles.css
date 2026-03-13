@@ -2,14 +2,17 @@ body
 {
     background-color: rgb(42, 42, 42);
     font-family: Verdana;
+    font-size: smaller;
 }
 
 .BuilderWindow
 {
+    margin: 0.5cm;
+    
     background-color: rgb(48, 48, 48);
     border-radius: .5cm;
 
-    height: 100vh;
+    height: 95vh;
 
     color:white;
 }
@@ -21,16 +24,18 @@ body
     border-bottom-left-radius: .5cm;
 
     height: 100%;
-    width: 60%;
-    
+    width: 74.5%;
 
     float: left;
 }
 
 .SidePanel
 {
+    display: flex;
+    flex-flow: column;
+
     height: 100%;
-    width: 40%;
+    width: 25%;
     
     float: right;
 }
@@ -44,16 +49,56 @@ body
     aspect-ratio: 1;
 }
 
-.Input
+.InputPanel
 {
-    
+    display: flex;
+    flex-flow: column;
+
+    margin-top: 2%;
     background-color: rgb(35, 35, 35);
     border-bottom-right-radius: .5cm;
-    height: 100%;
+    
+    flex: 1 1 auto;
 }
 
-.BuilderWindow,.TreeList,.GalaxyView,.Input
+.BuilderWindow,.TreeList,.GalaxyView,.InputPanel
 {
     box-sizing: border-box;
     padding: 0.5cm;
+}
+
+.GalaxyCanvas
+{
+    background-color: black;
+
+    align-self: center;
+
+    aspect-ratio: 1;
+    width: 100%;
+}
+
+.Input
+{
+    position: relative;
+    flex: 1 1 auto;
+}
+
+.TextBox
+{
+    border: 0;
+
+    background-color: rgb(21, 21, 21    );;
+    color: white;
+
+    position:absolute;
+    bottom: 0;
+    width: calc(100% - 0.5cm);
+
+    padding: 7px;
+    padding-left: 10px;
+}
+
+::-webkit-input-placeholder
+{
+    color: gray;
 }

@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Uh oh...</title>
-    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="icon" type="image/x-icon" href="..\icon.png">
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,10 +16,17 @@
             </div>
             <div class="SidePanel">
                 <div class="GalaxyView">
-                    This is where the galaxy is displayed
+                    <canvas id="galaxy" class="GalaxyCanvas">
+
+                    </canvas>
                 </div>
-                <div class="Input">
-                    This is where the description of the selected property and an input field is given
+                <div class="InputPanel">
+                    <div class="Description">
+                        This is where the description of the selected property and an input field is given
+                    </div>
+                    <div class="Input">
+                        <input class="TextBox" placeholder="Placeholder :v">
+                    </div>
                 </div>
             </div>
         </div>
