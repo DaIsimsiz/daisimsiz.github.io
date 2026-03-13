@@ -1,0 +1,59 @@
+body
+{
+    background-color: rgb(42, 42, 42);
+    font-family: Verdana;
+}
+
+.BuilderWindow
+{
+    background-color: rgb(48, 48, 48);
+    border-radius: .5cm;
+
+    height: 100vh;
+
+    color:white;
+}
+
+.TreeList
+{
+    background-color: rgb(40, 40, 40);
+    border-top-left-radius: .5cm;
+    border-bottom-left-radius: .5cm;
+
+    height: 100%;
+    width: 60%;
+    
+
+    float: left;
+}
+
+.SidePanel
+{
+    height: 100%;
+    width: 40%;
+    
+    float: right;
+}
+
+.GalaxyView
+{
+
+    background-color: rgb(21, 21, 21);
+    border-top-right-radius: .5cm;
+
+    aspect-ratio: 1;
+}
+
+.Input
+{
+    
+    background-color: rgb(35, 35, 35);
+    border-bottom-right-radius: .5cm;
+    height: 100%;
+}
+
+.BuilderWindow,.TreeList,.GalaxyView,.Input
+{
+    box-sizing: border-box;
+    padding: 0.5cm;
+}
