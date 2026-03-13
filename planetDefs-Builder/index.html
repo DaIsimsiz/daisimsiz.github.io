@@ -6,13 +6,35 @@
     <meta charset="UTF-8">
     <title>Uh oh...</title>
     <link rel="icon" type="image/x-icon" href="..\icon.png">
-    <script src="scripts.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
     <body>
         <div class="BuilderWindow">
-            <div class="TreeList">
-                This is where the tree list is shown
+            <div class="TreeViewPanel">
+                <div class="TreeView">
+                    <ul>
+                        <li><span class="expand"><span class="icon"></span>Galaxy</span>
+                            <ul class="collapsed">
+                            <li><span class="icon"></span>Star 1</li>
+                            <li><span class="icon"></span>Star 2</li>
+                            <li><span class="expand"><span class="icon"></span>Star 3</span>
+                                <ul class="collapsed">
+                                <li><span class="icon"></span>Planet 1</li>
+                                <li><span class="icon"></span>Planet 2</li>
+                                <li><span class="expand"><span class="icon"></span>Planet 3</span>
+                                    <ul class="collapsed">
+                                    <li><span class="icon"></span>Moon 1</li>
+                                    <li><span class="icon"></span>Moon 2</li>
+                                    <li><span class="icon"></span>Moon 3</li>
+                                    <li><span class="icon"></span>Moon 4</li>
+                                    </ul>
+                                </li>
+                                </ul>
+                            </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="SidePanel">
                 <div class="GalaxyView">
@@ -21,8 +43,10 @@
                     </canvas>
                 </div>
                 <div class="InputPanel">
-                    <div class="Description">
-                        This is where the description of the selected property and an input field is given
+                    <div>
+                        <div class="Description">
+                            This is where the description of the selected property and an input field is given
+                        </div>
                     </div>
                     <div class="Input">
                         <input class="TextBox" placeholder="Placeholder :v">
@@ -32,3 +56,4 @@
         </div>
     </body>
 </html>
+<script src="scripts.js"></script>

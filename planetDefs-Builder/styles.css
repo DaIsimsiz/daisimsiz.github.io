@@ -2,7 +2,7 @@ body
 {
     background-color: rgb(42, 42, 42);
     font-family: Verdana;
-    font-size: smaller;
+    font-size: small;
 }
 
 .BuilderWindow
@@ -17,7 +17,7 @@ body
     color:white;
 }
 
-.TreeList
+.TreeViewPanel
 {
     background-color: rgb(40, 40, 40);
     border-top-left-radius: .5cm;
@@ -27,6 +27,8 @@ body
     width: 74.5%;
 
     float: left;
+
+    font-weight: bold;
 }
 
 .SidePanel
@@ -61,7 +63,7 @@ body
     flex: 1 1 auto;
 }
 
-.BuilderWindow,.TreeList,.GalaxyView,.InputPanel
+.BuilderWindow,.TreeViewPanel,.GalaxyView,.InputPanel
 {
     box-sizing: border-box;
     padding: 0.5cm;
@@ -101,4 +103,68 @@ body
 ::-webkit-input-placeholder
 {
     color: gray;
+}
+
+.TreeView
+{
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    scrollbar-color: rgb(96, 96, 96) rgb(40, 40, 40);
+}
+
+ul
+{
+    list-style-type: none;
+    margin: 0;
+    margin-left: 20px;
+    padding: 0;
+}
+
+.expand
+{
+    cursor: pointer;
+    user-select: none;
+    display:inline-flex;
+    margin-left: -20px;
+}
+
+.expand::before
+{
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+
+    background-image: url("expand.png");
+
+    margin-right: 4px;
+
+    transition: transform 0.1s;
+}
+
+.collapse::before {
+    transition: 0.1s;
+    transform: scaleY(-1);
+}
+
+.icon
+{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+
+    background-image: url("galaxy.png");
+
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.collapsed { display: none; }
+.expanded { display: block; }
+
+li
+{
+    cursor: pointer;
+    user-select: none;
 }
