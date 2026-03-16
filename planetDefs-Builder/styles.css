@@ -1,187 +1,189 @@
 body {
-  background-color: rgb(42, 42, 42);
-  background-image: url("starfield.jpg");
-  background-size: 40vh;
-  font-family: Verdana;
-  font-size: small;
+    background-color: rgb(42, 42, 42);
+    background-image: url("starfield.jpg");
+    background-size: 40vh;
+    font-family: Verdana;
+    font-size: small;
 }
 
 .BuilderWindow {
-  margin: 0.5cm;
+    margin: 0.5cm;
 
-  background-color: rgba(48, 48, 48, 0.4);
-  border-radius: 0.5cm;
+    background-color: rgba(48, 48, 48, 0.4);
+    border-radius: 0.5cm;
 
-  height: 95vh;
+    height: 95vh;
 
-  color: white;
+    color: white;
 }
 
 .TreeViewPanel {
-  background-color: rgb(40, 40, 40);
-  border-top-left-radius: 0.5cm;
-  border-bottom-left-radius: 0.5cm;
+    background-color: rgb(40, 40, 40);
+    border-top-left-radius: 0.5cm;
+    border-bottom-left-radius: 0.5cm;
 
-  height: 100%;
-  width: 74.5%;
+    height: 100%;
+    width: 70%;
 
-  float: left;
+    float: left;
 
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .SidePanel {
-  display: flex;
-  flex-flow: column;
+    display: flex;
+    flex-flow: column;
 
-  height: 100%;
-  width: 25%;
+    height: 100%;
+    width: 29.5%;
 
-  float: right;
+    float: right;
 }
 
 .GalaxyView {
-  background-color: rgb(21, 21, 21);
-  border-top-right-radius: 0.5cm;
+    background-color: rgb(21, 21, 21);
+    border-top-right-radius: 0.5cm;
 
-  aspect-ratio: 1;
+    max-height: 50%;
+    width: 100%;
 }
 
 .InputPanel {
-  display: flex;
-  flex-flow: column;
+    display: flex;
+    flex-flow: column;
 
-  margin-top: 2%;
-  background-color: rgb(35, 35, 35);
-  border-bottom-right-radius: 0.5cm;
+    margin-top: 2%;
+    background-color: rgb(35, 35, 35);
+    border-bottom-right-radius: 0.5cm;
 
-  flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
 .BuilderWindow,
 .TreeViewPanel,
 .GalaxyView,
 .InputPanel {
-  box-sizing: border-box;
-  padding: 1cm;
+    box-sizing: border-box;
+    padding: 1cm;
 }
 .BuilderWindow {
-  padding-top: 0cm;
-  padding-bottom: 2.2cm;
+    padding-top: 0cm;
+    padding-bottom: 2.2cm;
 }
 
 .GalaxyCanvas {
-  background-color: black;
+    background-color: black;
 
-  align-self: center;
+    align-self: center;
 
-  aspect-ratio: 1;
-  width: 100%;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
 }
 
 .Input {
-  position: relative;
-  flex: 1 1 auto;
+    position: relative;
+    flex: 1 1 auto;
 }
 
 .TextBox {
-  border: 0;
+    border: 0;
 
-  background-color: rgb(21, 21, 21);
-  color: white;
+    background-color: rgb(21, 21, 21);
+    color: white;
 
-  position: absolute;
-  bottom: 0;
-  width: calc(100% - 0.5cm);
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 0.5cm);
 
-  padding: 7px;
-  padding-left: 10px;
+    padding: 7px;
+    padding-left: 10px;
 }
 
 ::-webkit-input-placeholder {
-  color: gray;
+    color: gray;
 }
 
 .TreeView {
-  height: 100%;
-  width: 100%;
-  overflow-y: scroll;
-  scrollbar-color: rgb(96, 96, 96) rgb(40, 40, 40);
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    scrollbar-color: rgb(96, 96, 96) rgb(40, 40, 40);
 }
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  margin-left: 20px;
-  padding: 0;
+    list-style-type: none;
+    margin: 0;
+    margin-left: 20px;
+    padding: 0;
 }
 
 .expand {
-  cursor: pointer;
-  user-select: none;
-  display: inline-flex;
-  margin-left: -20px;
+    cursor: pointer;
+    user-select: none;
+    display: inline-flex;
+    margin-left: -20px;
 }
 
 .expand::before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 16px;
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
 
-  background-image: url("expand.png");
+    background-image: url("expand.png");
 
-  margin-right: 4px;
+    margin-right: 4px;
 
-  transition: transform 0.1s;
+    transition: transform 0.1s;
 }
 
 .collapse::before {
-  transition: 0.1s;
-  transform: scaleY(-1);
+    transition: 0.1s;
+    transform: scaleY(-1);
 }
 
 .icon,
 .tip {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
 
-  background-image: url("galaxy.png");
+    background-image: url("galaxy.png");
 
-  margin-right: 4px;
-  vertical-align: middle;
+    margin-right: 4px;
+    vertical-align: middle;
 }
 .tip {
-  background-image: url("tip.png");
-  transition-duration: 0.25s;
+    background-image: url("tip.png");
+    transition-duration: 0.25s;
 }
 
 @keyframes spinnn {
-  to {
+    to {
     rotate: 360deg;
-  }
+    }
 }
 
 .tip:hover {
-  transition-duration: 0.5s;
-  filter: brightness(150%);
-  transform: scale(1.25, 1.25);
+    transition-duration: 0.5s;
+    filter: brightness(150%);
+    transform: scale(1.25, 1.25);
 
-  animation-name: spinnn;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+    animation-name: spinnn;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .collapsed {
-  display: none;
+    display: none;
 }
 .expanded {
-  display: block;
+    display: block;
 }
 
 li {
-  cursor: pointer;
-  user-select: none;
+    cursor: pointer;
+    user-select: none;
 }
