@@ -1,44 +1,24 @@
-<!--Comments will be used for documentation for myself-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Uh oh...</title>
+    <title>planetDefs Editor [WIP]</title>
     <link rel="icon" type="image/x-icon" href="..\icon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
     <body>
-        <div class="BuilderWindow">
+        <div class="BuilderWindow">    
+            <div style="padding-top: 0.4cm;padding-bottom: 0.4cm;">
+                <span id="tipIcon" class="tip"></span>Tip: Right click on an element to see if you can add properties to it.
+            </div>
             <div class="TreeViewPanel">
                 <div class="TreeView">
-                    <ul>
-                        <li><span class="expand"><span class="icon"></span>Galaxy</span>
-                            <ul class="collapsed">
-                            <li><span class="icon"></span>Star 1</li>
-                            <li><span class="icon"></span>Star 2</li>
-                            <li><span class="expand"><span class="icon"></span>Star 3</span>
-                                <ul class="collapsed">
-                                <li><span class="icon"></span>Planet 1</li>
-                                <li><span class="icon"></span>Planet 2</li>
-                                <li><span class="expand"><span class="icon"></span>Planet 3</span>
-                                    <ul class="collapsed">
-                                    <li><span class="icon"></span>Moon 1</li>
-                                    <li><span class="icon"></span>Moon 2</li>
-                                    <li><span class="icon"></span>Moon 3</li>
-                                    <li><span class="icon"></span>Moon 4</li>
-                                    </ul>
-                                </li>
-                                </ul>
-                            </li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <ul id="galaxyTreeView"></ul>
                 </div>
             </div>
             <div class="SidePanel">
                 <div class="GalaxyView">
-                    <canvas id="galaxy" class="GalaxyCanvas">
+                    <canvas id="galaxyCanvas" class="GalaxyCanvas">
 
                     </canvas>
                 </div>
@@ -54,6 +34,9 @@
                 </div>
             </div>
         </div>
+    </body>
+    <body class="contextMenu">
+        <!--Context menu-->
     </body>
 </html>
 <script src="scripts.js"></script>
