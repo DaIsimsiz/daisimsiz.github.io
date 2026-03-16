@@ -144,17 +144,20 @@ ul {
 }
 
 .icon,
-.tip {
+.tipButton {
     display: inline-block;
     width: 16px;
     height: 16px;
 
-    background-image: url("galaxy.png");
-
     margin-right: 4px;
     vertical-align: middle;
 }
-.tip {
+
+.icon {
+    background-image: url("galaxy.png");
+}
+
+.tipButton {
     background-image: url("tip.png");
     transition-duration: 0.25s;
 }
@@ -165,7 +168,7 @@ ul {
     }
 }
 
-.tip:hover {
+.tipButton:hover {
     transition-duration: 0.5s;
     filter: brightness(150%);
     transform: scale(1.25, 1.25);
