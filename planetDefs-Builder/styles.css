@@ -1,9 +1,23 @@
+@keyframes scroll {
+    from {
+    background-position: 0px 0px;
+    }
+    to {
+    background-position: 40vh 40vh;
+    }
+}
+
 body {
     background-color: rgb(42, 42, 42);
     background-image: url("starfield.jpg");
     background-size: 40vh;
     font-family: Verdana;
     font-size: small;
+
+    animation-name: scroll;
+    animation-duration: 120s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite ;
 }
 
 .BuilderWindow {
